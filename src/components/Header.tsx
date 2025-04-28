@@ -26,7 +26,13 @@ export default function Header() {
         </div>
         <ul className="mx-container w-full flexStart h-[60px] bg-black text-white font-semibold">
           {NAV_LINKS.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = link.href === "/"
+            ? pathname === "/"
+            : pathname.startsWith(link.href);
+
+
+
+            console.log(isActive)
 
             return (
               <Link
