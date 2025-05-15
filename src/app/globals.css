@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Akzidenz';
+  src: url('./fonts/Akzidenz-grotesk-light-bold.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akzidenz';
+  src: url('./fonts/Akzidenz-grotesk-roman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akzidenz';
+  src: url('./fonts/Akzidenz-grotesk-light-bold-italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url('./fonts/Cormorant-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +38,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #ffffff;
   }
 }
 
@@ -18,12 +46,9 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Akzidenz', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,7 +80,7 @@ a {
   }
 
   .b-container {
-    @apply border border-slate-400 p-5 mb-5
+    @apply border border-slate-400 p-5 mb-5;
   }
 
   .flexCenter {
@@ -77,4 +102,23 @@ a {
   .bold-30 {
     @apply text-3xl font-bold mb-8;
   }
+}
+
+@keyframes clap {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-clap {
+  animation: clap 300ms ease-in-out;
 }
