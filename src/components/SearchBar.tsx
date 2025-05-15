@@ -12,7 +12,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="relative w-full h-8 max-w-md mx-auto">
+    <div className="relative max-md:hidden w-72 h-8 max-w-md mx-auto mr-4 text-black">
       <input
         type="text"
         value={searchTerm}
