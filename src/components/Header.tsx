@@ -13,33 +13,24 @@ export default function Header() {
   const breadcrumbItems = pathname.split("/").filter(Boolean);
 
   return (
-    <nav>
+    <nav className="mb-5">
       <div className="flexCenter flex-col shadow-xl">
-        <div className="w-full mx-container">
-          <Image
-            src="/MSZF.jpeg"
-            alt="logo"
-            width={150}
-            height={100}
-            priority
-          />
+        <div className="w-full mx-container flexCenter bg-white">
+          <Image src="/MSZF.jpeg" alt="logo" width={150} height={71} priority />
         </div>
-        <ul className="mx-container w-full flexStart h-[60px] bg-black text-white font-semibold">
+        <div className="mx-container w-full flexCenter md:flexStart h-[60px] bg-black text-white text-sm tracking-[0.1em] font-semibold">
           {NAV_LINKS.map((link) => {
-            const isActive = link.href === "/"
-            ? pathname === "/"
-            : pathname.startsWith(link.href);
-
-
-
-            console.log(isActive)
+            const isActive =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
 
             return (
               <Link
                 key={link.key}
                 href={link.href}
                 className={clsx(
-                  "group relative flexCenter flex-col h-full px-4 transition-transform duration-300 ease-out transform-gpu origin-top",
+                  "group relative flexCenter flex-col h-full px-4 transition-all duration-300 ease-out origin-top",
                   isActive
                     ? "scale-110 z-40 bg-amber-400 text-black"
                     : "hover:bg-amber-400 hover:text-black"
@@ -47,20 +38,27 @@ export default function Header() {
               >
                 <span
                   className={clsx(
-                    "absolute bottom-0 left-1/2 h-0.5 bg-black transition-all duration-300 ease-out",
-                    isActive ? "" : "w-0 group-hover:w-full group-hover:left-0"
+                    "absolute bottom-3 w-0 h-[1px] bg-black transition-all duration-300 ease-out",
+                    isActive ? "" : "group-hover:scale-x-75 group-hover:w-full"
                   )}
                 />
                 {link.label}
               </Link>
             );
           })}
-        </ul>
+          <SearchBar />
+        </div>
       </div>
-      <div className="mx-container flexBetween  p-2 my-5">
-        <div className="flexStart col-start-1 col-end-6 row-start-2 row-end-3 text-sm text-gray-500">
-          <Link href="/" className="hover:text-black">
-            <Image src="/home.svg" width={18} height={18} alt="home" className="mx-1"/>
+      <div className="mx-container flexBetween mt-2 p-2">
+        <div className="flexStart col-start-1 col-end-6 row-start-2 row-end-3 text-sm text-gray-700">
+          <Link href="/" className="hover:text-slate-400">
+            <Image
+              src="/home.svg"
+              width={18}
+              height={18}
+              alt="home"
+              className="mx-1"
+            />
           </Link>
           {breadcrumbItems.map((item, idx) => {
             const isLast = idx === breadcrumbItems.length - 1;
@@ -79,7 +77,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={`/${breadcrumbItems.slice(0, idx + 1).join("/")}`}
-                    className="hover:text-black"
+                    className="hover:text-slate-400"
                   >
                     {item}
                   </Link>
@@ -87,9 +85,6 @@ export default function Header() {
               </span>
             );
           })}
-        </div>
-        <div>
-          <SearchBar />
         </div>
       </div>
     </nav>
