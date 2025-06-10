@@ -1,8 +1,10 @@
 import Link from "next/link";
 
 export interface Publication {
+  year: string;
   title: string;
-  date: string;
+  source: string;
+  url?: string;
 }
 
 interface MemberProps {
@@ -32,7 +34,7 @@ const Overlay = ({ member }: { member: MemberProps }) => (
 
 const MemberCard = ({ member }: { member: MemberProps }) => {
   return (
-    <div className="relative h-80 overflow-hidden shadow-lg group rounded-sm">
+    <div className="relative h-80 overflow-hidden shadow-lg rounded-xl group">
       <img
         src={member.profileImg}
         alt={member.name}
