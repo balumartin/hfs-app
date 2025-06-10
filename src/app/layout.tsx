@@ -1,6 +1,7 @@
-import Header from "@/components/Header";
 import "./globals.css";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BreadCrumb from "@/components/BreadCrumb";
 
 export const metadata = {
   title: "HFS-app",
@@ -13,9 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body>
         <Header />
+        <BreadCrumb />
         <main className="relative overflow-hidden">{children}</main>
         <Footer />
       </body>
