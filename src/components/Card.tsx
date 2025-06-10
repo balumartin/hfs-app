@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface CardProps {
   autor: string;
   title: string;
@@ -5,18 +7,17 @@ interface CardProps {
   backgroundImg: string;
 }
 
-const Card = ({ item } : { item : CardProps}) => {
+const Card = ({ item }: { item: CardProps }) => {
   return (
-    <div className="p-2 border border-slate-400">
-      <div className="group relative h-80 w-full overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${item.backgroundImg})` }}
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-all duration-300" />
-        <div className="relative z-10 flex h-full flex-col justify-end p-4 text-white">
-          <h4 className="text-xl font-semibold">{item.title}</h4>
-          <h5 className="text-sm text-gray-300">{item.autor}</h5>
+    <div className="flex flex-col p-1 rounded">
+      <div className="group relative w-full h-[500px] shadow-md hover:shadow-lg hover:bg-slate-100 transition-all hover:cursor-pointer duration-300">
+        <div>
+          <img src={item.backgroundImg} alt={item.title} />
+        </div>
+
+        <div className="flex flex-col justify-end p-4">
+          <h4 className="text-xl font-semibold text-black">{item.title}</h4>
+          <h5 className="text-sm">{item.autor}</h5>
           <p className="text-sm mt-1">{item.subtitle}</p>
         </div>
       </div>
