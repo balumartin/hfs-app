@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-slate-100 text-center py-4 text-sm text-slate-500">
+    <footer className="w-full h-20 flexCenter bg-black text-center py-4 text-sm text-white">
       © 2025 All rights reserved.
     </footer>
   );
