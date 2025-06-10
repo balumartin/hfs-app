@@ -12,14 +12,14 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="relative max-md:hidden w-72 h-8 max-w-md mx-auto mr-4 text-black">
+    <div className="relative max-md:hidden w-52 h-8 max-w-md mx-auto mr-4 text-black">
       <input
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-        placeholder="Keresés..."
-        className="w-full pl-5 pr-5 h-full rounded-full border border-slate-400 focus:outline-none focus:ring-0.5 focus:ring-black focus:border-black"
+        placeholder="Search..."
+        className="w-full pl-5 pr-5 h-full rounded-full placeholder-slate-400 focus:outline-none focus:bg-slate-200"
       />
 
       <button
