@@ -4,28 +4,25 @@ import { MEMBERS } from "@/constants";
 export default function Members() {
   return (
     <section className="mx-container">
-      <div className="mb-5 px-6 py-10 flexCenter flex-col">
-        <blockquote className="text-xl italic font-semibold text-gray-900 dark:text-white">
+      <div className="b-container py-6 px-10 mb-10">
+        <div className="mb-5 flex items-center gap-2 font-bold text-2xl text-slate-700 border-b border-slate-200">
           <svg
-            className="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4"
-            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 18 14"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
           >
-            <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+            />
           </svg>
-          <p>
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero et quasi deleniti porro adipisci illum, natus consequuntur dicta."
-          </p>
-          
-        </blockquote>
-      </div>
-      <div className="b-container p-10 ">
-        <h1 className="mb-5 font-bold text-2xl text-slate-700 border-b border-slate-200">
-          Tagok
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <h1>Tagok</h1>
+        </div>
+        <div className="grid grid-cols-2 gap-4">
           {MEMBERS.map((m) => (
             <MemberCard key={m.key} member={m} />
           ))}

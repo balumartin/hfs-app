@@ -52,6 +52,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Akzidenz", sans-serif;
+  color: #555;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -83,7 +84,7 @@ a {
   }
 
   .b-container {
-    @apply border border-slate-300;
+    @apply border border-slate-300 rounded;
   }
 
   .flexCenter {

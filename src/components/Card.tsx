@@ -7,8 +7,8 @@ interface CardProps {
 
 const Card = ({ item }: { item: CardProps }) => {
   return (
-    <div className="flex flex-col p-1 rounded">
-      <div className="group relative w-full h-[500px] shadow-md hover:shadow-lg hover:bg-slate-100 transition-all hover:cursor-pointer duration-300">
+    <article className="flex flex-col p-1">
+      <div className="group relative w-full h-[450px]  rounded overflow-hidden shadow-md hover:shadow-lg hover:bg-slate-200 transition-all hover:cursor-pointer duration-300">
         <div>
           <img src={item.backgroundImg} alt={item.title} />
         </div>
@@ -19,7 +19,7 @@ const Card = ({ item }: { item: CardProps }) => {
           <p className="text-sm mt-1">{item.subtitle}</p>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

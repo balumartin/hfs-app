@@ -18,31 +18,37 @@ export default async function MemberDetailPage({ params }: Props) {
   if (!member) return notFound();
 
   return (
-    <main className="mx-container b-container p-10 my-10">
-      <BackButton />
-      <h1 className="text-3xl text-center font-bold mb-4">{member.name}</h1>
-      <div className="flex justify-start items-start gap-6 w-full">
-        <div className="w-[400px] h-auto rounded-xl overflow-hidden">
-          <img
-            src={member.profileImg}
-            alt={member.name}
-            className="w-full h-full"
-          />
+    <section className="mx-container">
+      <div className="b-container py-6 px-10 mb-10">
+        <div className="mb-5 flex items-center gap-2 font-bold text-2xl text-slate-700 border-b border-slate-200">
+          <BackButton />
+          <h1>{member?.name}</h1>
         </div>
-        <div className=" w-full">
-          <p className="text-gray-700">{member.bioHU}</p>
-          <h2 className="text-2xl font-semibold mt-8">Publikációk</h2>
-          <ul className="mt-4 px-4 list-disc list-inside">
-            {member.publications.map((p, i) => (
-              <li key={i} className="list-outside text-start pl-4 mt-2">
-                <span className="font-medium"><a href="">{p.title}</a></span>
-                <span className="font-medium">{p.source}</span>
-                <span className="text-sm text-gray-500">({p.year})</span>
-              </li>
-            ))}
-          </ul>
+        <div className="flex justify-start items-start gap-6 w-full">
+          <div className="flex-1">
+            <p className="text-gray-700">{member.bioHU}</p>
+            <h2 className="text-2xl font-semibold mt-8">Publikációk</h2>
+            <ul className="mt-4 px-4 list-disc list-inside">
+              {member?.publications.map((p, i) => (
+                <li key={i} className="list-outside text-start pl-4 mt-2">
+                  <span className="font-medium">
+                    <a href="">{p.title}</a>
+                  </span>
+                  <span className="font-medium">{p.source}</span>
+                  <span className="text-sm text-gray-500">({p.year})</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="w-[300px] h-auto rounded overflow-hidden">
+            <img
+              src={member?.profileImg}
+              alt={member?.name}
+              className="bg-center bg-cover w-full h-full"
+            />
+          </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }

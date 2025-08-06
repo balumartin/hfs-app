@@ -15,10 +15,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/MSZF.jpeg" sizes="any" />
+      </head>
       <body>
         <Header />
         <BreadCrumb />
-        <main className="relative overflow-hidden">{children}</main>
+        {/* <div className="bg-fixed bg-[url(/hand_transparent.png)] bg-auto bg-top bg-no-repeat mx-auto z-0"> */}
+        <div className=" mx-auto z-0">
+          <main className="relative overflow-hidden">{children}</main>
+        </div>
         <Footer />
       </body>
     </html>
