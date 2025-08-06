@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import SearchBar from "./SearchBar";
 import { useState } from "react";
 
 export default function Header() {

@@ -1,3 +1,5 @@
+'use client';
+
 import BackButton from "@/components/BackButton";
 import { MEMBERS } from "@/constants";
 import { notFound } from "next/navigation";
