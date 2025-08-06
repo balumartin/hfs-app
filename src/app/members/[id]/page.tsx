@@ -1,6 +1,9 @@
+"use client";
+
 import BackButton from "@/components/BackButton";
 import { MEMBERS } from "@/constants";
 import { notFound } from "next/navigation";
+import { useParams } from "next/navigation";
 
 type Props = {
   params: {
@@ -8,14 +11,10 @@ type Props = {
   };
 };
 
-export async function generateStaticParams() {
-  return MEMBERS.map((m) => ({ id: m.key }));
-}
+export default function Page() {
+  const params = useParams<{ id: string }>();
 
-export default async function Page({ params }: Props) {
-  const { id } = params;
-
-  const member = MEMBERS.find((m) => m.key === id);
+  const member = MEMBERS.find((m) => m.key === params.id);
   if (!member) return notFound();
 
   return (
