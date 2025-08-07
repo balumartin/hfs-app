@@ -10,7 +10,7 @@ import { useState } from "react";
 export default function Header() {
   const pathname = usePathname();
 
-  const [isOpen, setIsOpen] = useState("");
+  const [isOpen, setIsOpen] = useState();
 
   return (
     <header className="shadow-2xl">
