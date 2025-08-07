@@ -80,7 +80,7 @@ a {
   }
 
   .p-container {
-    @apply p-6 lg:p-20 2xl:p-6;
+    @apply lg:p-6 xl:p-20 2xl:p-6;
   }
 
   .b-container {

@@ -22,7 +22,7 @@ export default function MembersPage() {
           </svg>
           <h1>Tagok</h1>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {MEMBERS.map((m) => (
             <MemberCard key={m.key} member={m} />
           ))}
