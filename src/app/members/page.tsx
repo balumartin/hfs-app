@@ -1,9 +1,9 @@
 import MemberCard from "@/components/MemberCard";
 import { MEMBERS } from "@/constants";
 
-export default function Members() {
+export default function MembersPage() {
   return (
-    <section className="mx-container">
+    <main className="mx-container">
       <div className="b-container py-6 px-10 mb-10">
         <div className="mb-5 flex items-center gap-2 font-bold text-2xl text-slate-700 border-b border-slate-200">
           <svg
@@ -28,6 +28,6 @@ export default function Members() {
           ))}
         </div>
       </div>
-    </section>
+    </main>
   );
 }

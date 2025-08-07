@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function AboutUs() {
   return (
-    <section className="mx-container mb-10 h-[600px] bg-white rounded shadow-xl">
-      <div className="flexCenter h-full p-16 gap-8">
-        <div className="w-1/2 flex flex-col justify-center">
+    <section className="mx-container mb-10 lg:h-[600px] h-auto bg-white rounded shadow-xl">
+      <div className="lg:flexCenter h-full p-16 gap-8">
+        <div className="lg:w-1/2 w-full flex flex-col justify-center">
           <h3 className="font-cormorant text-xl w-full font-bold">
             Magyar Szómaesztétikai Társaság
           </h3>
@@ -41,7 +41,7 @@ export default function AboutUs() {
             </Link>
           </div>
         </div>
-        <div className="w-[384px] h-[384px] flex flex-wrap flex-row-reverse">
+        <div className="lg:w-[384px] lg:h-[384px] max-lg:flexCenter max-lg:pt-5 flex flex-wrap flex-row-reverse">
           {MEMBERS.map((member) => (
             <div key={member.name} className="group w-32 h-32 ">
               <img

@@ -1,6 +1,6 @@
-export default function page() {
+export default function HistoryPage() {
   return (
-    <section className="relative mx-container p-container  lg:rounded shadow-xl lg:mb-10 overflow-hidden">
+    <main className="relative mx-container p-container  lg:rounded shadow-xl lg:mb-10 overflow-hidden">
       <div className="absolute top-2 blur-sm -right-16 w-[500px] h-auto z-10 scale-y-[-1] opacity-55">
         <img src="/hand_transparent.png" alt="hand" className="inline" />
       </div>
@@ -196,6 +196,6 @@ export default function page() {
           a designkutatást.
         </p>
       </div>
-    </section>
+    </main>
   );
 }

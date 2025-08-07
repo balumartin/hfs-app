@@ -10,7 +10,7 @@ import { useState } from "react";
 export default function Header() {
   const pathname = usePathname();
 
-  const [isOpen, setIsOpen] = useState();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="shadow-2xl">
@@ -27,13 +27,39 @@ export default function Header() {
             />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={clsx("p-2  lg:hidden", isOpen ? "s" : "bg-red-400")}
+              className="p-2 lg:hidden"
             >
-              <img
-                src="/menu.svg"
-                alt="menu"
-                className="inline-block  w-12 h-12 cursor-pointer"
-              />
+              {isOpen ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              )}
             </button>
           </div>
         </div>
@@ -65,9 +91,33 @@ export default function Header() {
               </Link>
             );
           })}
-          {/* <SearchBar /> */}
         </nav>
       </div>
+      {isOpen && (
+        <nav className="lg:hidden z-40 w-full flex flex-col">
+          {NAV_LINKS.map((link) => {
+            const isActive =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
+
+            return (
+              <Link
+                key={link.key}
+                href={link.href}
+                className={clsx(
+                  "group relative flexCenter flex-col h-full px-4 transition-all duration-300 ease-out origin-top",
+                  isActive
+                    ? "z-40 bg-primary text-secondary"
+                    : "hover:bg-secondary hover:text-black"
+                )}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
+      )}
     </header>
   );
 }

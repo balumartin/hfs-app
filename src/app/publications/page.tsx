@@ -2,10 +2,10 @@
 
 import { MEMBERS } from "@/constants";
 
-export default function Page() {
+export default function PublicationsPage() {
   return (
-    <section className="mx-container b-container py-6 px-10 mb-10">
-      <div className="mb-5 w-full flexStart font-bold text-2xl text-slate-700 border-b border-slate-200">
+    <main className="mx-container b-container py-6 px-10 mb-10">
+      <div className="mb-5 w-full flexStart font-bold text-md lg:text-2xl text-slate-700 border-b border-slate-200">
         <div className="flex-1 flex items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +37,6 @@ export default function Page() {
           ))
         )}
       </ol>
-    </section>
+    </main>
   );
 }

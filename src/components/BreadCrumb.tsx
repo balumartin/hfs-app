@@ -9,7 +9,7 @@ export default function BreadCrumb() {
   const breadcrumbItems = pathname.split("/").filter(Boolean);
 
   return (
-    <section className="w-full mb-5 xl:mb-10 flexStart xl:flexCenter xl:pt-10 p-2">
+    <section className="w-full mb-5 xl:mb-10 flexCenter xl:pt-10 p-2">
       <div className="flexStart col-start-1 col-end-6 row-start-2 row-end-3 text-sm text-gray-700">
         <Link href="/" className="hover:text-slate-400">
           <Image
