@@ -4,7 +4,7 @@ import { MEMBERS } from "@/constants";
 
 export default function PublicationsPage() {
   return (
-    <main className="mx-container b-container py-6 px-10 mb-10">
+    <main className="mx-container b-container py-6 px-2 md:px-10 mb-10">
       <div className="mb-5 w-full flexStart font-bold text-md lg:text-2xl text-slate-700 border-b border-slate-200">
         <div className="flex-1 flex items-center gap-2">
           <svg
@@ -24,10 +24,10 @@ export default function PublicationsPage() {
           <h1>Publikációk</h1>
         </div>
       </div>
-      <ol className="list-decimal ml-4 pl-4 space-y-6">
+      <ol className="list-decimal max-md:mx-2 md:ml-4 pl-4 space-y-6">
         {MEMBERS.flatMap((member) =>
           member.publications.map((pub, index) => (
-            <li key={`${member.name}-${index}`} className="text-lg">
+            <li key={`${member.name}-${index}`} className="text-md md:text-lg">
               <p>
                 <span className="font-semibold">{pub.title}</span>, {pub.year} (
                 {pub.source}) –{" "}

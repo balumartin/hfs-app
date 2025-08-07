@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function News() {
   return (
-    <section className="mx-container bg-white/95 b-container py-6 px-10 mb-10">
+    <section className="mx-container bg-white/95 b-container py-6 px-2 md:px-10 mb-10">
       <div className="mb-5 flex items-center gap-2 font-bold text-2xl text-slate-700 border-b border-slate-200">
         <svg
           xmlns="http://www.w3.org/2000/svg"

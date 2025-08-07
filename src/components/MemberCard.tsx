@@ -44,7 +44,7 @@ const Overlay = ({ member }: { member: MemberProps }) => (
 const MemberCard = ({ member }: { member: MemberProps }) => {
   return (
     <div className="relative w-full h-[150px] overflow-hidden flex">
-      <div className="w-[150px] h-[150px]">
+      <div className="w-[150px] h-[150px] rounded overflow-hidden">
         <img
           src={member.profileImg}
           alt={member.name}

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function AboutUs() {
   return (
     <section className="mx-container mb-10 lg:h-[600px] h-auto bg-white rounded shadow-xl">
-      <div className="lg:flexCenter h-full p-16 gap-8">
+      <div className="lg:flexCenter h-full md:p-16 p-4 gap-8">
         <div className="lg:w-1/2 w-full flex flex-col justify-center">
           <h3 className="font-cormorant text-xl w-full font-bold">
             Magyar Szómaesztétikai Társaság
@@ -26,24 +26,24 @@ export default function AboutUs() {
             közvetítse, a kutatási terület magyarországi megismertetését
             előmozdítsa.
           </article>
-          <div className="flexStart gap-6">
+          <div className="flexCenter max-sm:mb-8 md:flexStart gap-6">
             <Link
               href={"/history"}
-              className="mt-4 block w-32 text-center bg-slate-600 hover:bg-slate-500 active:shadow-[0_10px_20px_rgba(0,0,0,0.2)] text-white text-md py-2 px-4"
+              className="mt-4 rounded block w-32 text-center bg-slate-600 hover:bg-slate-500 active:shadow-[0_10px_20px_rgba(0,0,0,0.2)] text-white text-md py-2 px-4"
             >
               Our History
             </Link>
             <Link
               href={"/members"}
-              className="mt-4 block w-32 text-center bg-slate-600 hover:bg-slate-500 active:shadow-[0_10px_20px_rgba(0,0,0,0.2)] text-white text-md py-2 px-4"
+              className="mt-4 rounded block w-32 text-center bg-slate-600 hover:bg-slate-500 active:shadow-[0_10px_20px_rgba(0,0,0,0.2)] text-white text-md py-2 px-4"
             >
               Our Members
             </Link>
           </div>
         </div>
-        <div className="lg:w-[384px] lg:h-[384px] max-lg:flexCenter max-lg:pt-5 flex flex-wrap flex-row-reverse">
+        <div className="lg:w-[384px] lg:h-[384px] max-md:gap-2 max-lg:flexCenter max-lg:pt-5 flex flex-wrap flex-row-reverse">
           {MEMBERS.map((member) => (
-            <div key={member.name} className="group w-32 h-32 ">
+            <div key={member.name} className="group w-32 h-32 max-md:rounded max-md:overflow-hidden ">
               <img
                 src={member.profileImg}
                 alt={member.name}

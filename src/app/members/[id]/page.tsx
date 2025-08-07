@@ -12,12 +12,12 @@ export default async function MemberDetailsPage(props: { params: Promise<{ id: s
 
   return (
     <main className="mx-container">
-      <div className="b-container py-6 px-10 mb-10">
+      <div className="b-container py-6 px-2 md:px-10 mb-10">
         <div className="mb-5 flex items-center gap-2 font-bold text-2xl text-slate-700 border-b border-slate-200">
           <BackButton />
           <h1>{member?.name}</h1>
         </div>
-        <div className="lg:hidden w-[300px] mx-auto py-5 h-auto rounded overflow-hidden">
+        <div className="lg:hidden w-1/2 h-auto mx-auto py-5 rounded overflow-hidden">
             <img
               src={member?.profileImg}
               alt={member?.name}
