@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         akzidenz: ["'Akzidenz'", "sans-serif"],
         cormorant: ["'Cormorant'", "serif"],
+        sans: ["var(--font-work-sans)", "sans-serif"],
       },
     },
   },

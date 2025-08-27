@@ -1,0 +1,7 @@
+{
+  "home": { "href": "/", "label": "Home" },
+  "aboutus": { "href": "/members", "label": "Members" },
+  "projects": { "href": "/projects", "label": "Projects" },
+  "publications": { "href": "/publications", "label": "Publications" },
+  "history": { "href": "/history", "label": "History" }
+}

@@ -2,7 +2,11 @@ import { NEWS } from "@/constants";
 import Card from "./Card";
 import Link from "next/link";
 
-export default function News() {
+interface NewsProps {
+  lang: string
+}
+
+export default function News({lang}: NewsProps) {
   return (
     <section className="mx-container bg-white/95 b-container py-6 px-2 md:px-10 mb-10">
       <div className="mb-5 flex items-center gap-2 font-bold text-2xl text-slate-700 border-b border-slate-200">

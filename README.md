@@ -14,7 +14,7 @@ Ez a projekt a **Magyar Szómaesztétikai Fórum** hivatalos weboldala, mely cé
 
 ## ⚙️ Technológiák
 
-- [Next.js 14](https://nextjs.org/) – Full-stack React keretrendszer
+- [Next.js 15](https://nextjs.org/) – Full-stack React keretrendszer
 - [TypeScript](https://www.typescriptlang.org/) – Típusos JavaScript
 - [Tailwind CSS](https://tailwindcss.com/) – Utility-first stílusozás
 - [clsx](https://github.com/lukeed/clsx) – Feltételes CSS osztálykezelés
