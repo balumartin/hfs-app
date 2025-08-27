@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
 
@@ -8,7 +9,11 @@ const languages = [
   { code: "en", label: "English" },
 ];
 
-export default function LanguageSwitcher({ currentLang }: { currentLang: string }) {
+export default function LanguageSwitcher({
+  currentLang,
+}: {
+  currentLang: string;
+}) {
   const pathname = usePathname();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -30,10 +35,15 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
 
   return (
     <div className="relative inline-block w-full flexEnd mr-4">
+      {currentLang === "hu" ? (
+        <Image src="/hu.png" alt="hungarianflag" width={24} height={18} />
+      ) : (
+        <Image src="/gb.png" alt="britishflag" width={24} height={18} />
+      )}
       <select
         value={currentLang}
         onChange={handleChange}
-        className=" hover:bg-gray-200 border-2 bg-white border-gray-500 text-gray-700 py-1 pl-2 pr-2 rounded cursor-pointer text-sm"
+        className=" hover:bg-gray-200  ml-2 bg-slate-50 text-gray-700 py-1 pl-1 pr-2 rounded cursor-pointer text-sm"
       >
         {languages.map((lang) => (
           <option key={lang.code} value={lang.code}>
