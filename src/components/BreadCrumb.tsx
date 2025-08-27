@@ -1,46 +1,39 @@
 "use client";
 
-import Image from "next/image";
+import { ChevronRightIcon, HomeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function BreadCrumb() {
   const pathname = usePathname();
-  const breadcrumbItems = pathname.split("/").filter(Boolean);
+  const breadcrumbItems = pathname
+    .split("/")
+    .filter(Boolean)
+    .filter((item) => item !== "hu" && item !== "en");
 
   return (
-    <section className="w-full mb-5 xl:mb-10 flexCenter xl:pt-10 p-2">
+    <section className="mx-container my-2  flexStart xl:pt-10 p-2">
       <div className="flexStart col-start-1 col-end-6 row-start-2 row-end-3 text-sm text-gray-700">
-        <Link href="/" className="hover:text-slate-400">
-          <Image
-            src="/home.svg"
-            width={18}
-            height={18}
-            alt="home"
-            className="mx-1"
-          />
-        </Link>
+        {breadcrumbItems.length > 0 && (
+          <Link href="/" className="hover:text-slate-400">
+            <HomeIcon className="w-5 h-5 text-gray-700" />
+          </Link>
+        )}
         {breadcrumbItems.map((item, idx) => {
-          const isLast = idx === breadcrumbItems.length - 1;
           return (
             <span key={idx} className="flex items-center">
-              <span className="mx-2">
-                <Image
-                  src="/arrow-r.svg"
-                  width={15}
-                  height={15}
-                  alt="arrow-r"
-                />
+              <span className="flexCenter mx-2">
+                <ChevronRightIcon className="w-4 h-4 text-gray-700" />
               </span>
-              {isLast ? (
-                <span className="text-gray-700">{item}</span>
-              ) : (
+              {idx < breadcrumbItems.length - 1 ? (
                 <Link
                   href={`/${breadcrumbItems.slice(0, idx + 1).join("/")}`}
                   className="hover:text-slate-400"
                 >
                   {item}
                 </Link>
+              ) : (
+                <span className="text-gray-700">{item}</span>
               )}
             </span>
           );
