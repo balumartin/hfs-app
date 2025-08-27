@@ -3,9 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
+import navHU from "@/locales/hu/nav.json";
+import navEN from "@/locales/en/nav.json";
 import { useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { usePathname } from "@/i18n/navigation";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -13,16 +15,12 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const t = useTranslations("nav");
-
   const locale = useLocale();
 
-  const navKeys = ["home", "aboutus", "projects", "publications", "history"];
-  const links = navKeys.map((key) => ({
-    key,
-    href: t(`${key}.href`),
-    label: t(`${key}.label`),
-  }));
+  const nav = locale === "hu" ? navHU : navEN;
+
+  const links = Object.values(nav)
+
 
   return (
     <header className="shadow-2xl">
@@ -59,7 +57,7 @@ export default function Header() {
 
             return (
               <Link
-                key={link.key}
+                key={link.id}
                 href={link.href}
                 className={clsx(
                   "group relative flexCenter flex-col h-full w-36 px-3 transition-all duration-300 ease-out origin-top",
@@ -90,7 +88,7 @@ export default function Header() {
 
             return (
               <Link
-                key={link.key}
+                key={link.id}
                 href={link.href}
                 className={clsx(
                   "group relative flexCenter flex-col h-full px-4 transition-all duration-300 ease-out origin-top",

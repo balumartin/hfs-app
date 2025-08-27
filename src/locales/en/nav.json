@@ -1,7 +1,7 @@
 {
-  "home": { "href": "/", "label": "Home" },
-  "aboutus": { "href": "/members", "label": "Members" },
-  "projects": { "href": "/projects", "label": "Projects" },
-  "publications": { "href": "/publications", "label": "Publications" },
-  "history": { "href": "/history", "label": "History" }
+  "home": { "id": "1", "href": "/", "label": "Home" },
+  "aboutus": { "id": "2", "href": "/members", "label": "Members" },
+  "projects": { "id": "3", "href": "/projects", "label": "Projects" },
+  "publications": { "id": "4", "href": "/publications", "label": "Publications" },
+  "history": { "id": "5", "href": "/history", "label": "History" }
 }
