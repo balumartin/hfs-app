@@ -33,7 +33,7 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
       <select
         value={currentLang}
         onChange={handleChange}
-        className=" hover:bg-gray-200 border-2 border-gray-700 text-gray-700 py-1 pl-2 pr-2 rounded cursor-pointer text-sm"
+        className=" hover:bg-gray-200 border-2 bg-white border-gray-500 text-gray-700 py-1 pl-2 pr-2 rounded cursor-pointer text-sm"
       >
         {languages.map((lang) => (
           <option key={lang.code} value={lang.code}>
