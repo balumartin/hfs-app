@@ -74,7 +74,7 @@ export default function PublicationsPage() {
                     </span>
                     <span className="font-semibold">{pub.title}</span> (
                     {pub.source})
-                    <Link href={`${pub.url}`} className="block text-blue-400">
+                    <Link target="_blank" rel="noopener noreferrer" href={`${pub.url}`} className="block text-blue-400">
                       {pub.url}
                     </Link>
                   </p>
@@ -105,7 +105,7 @@ export default function PublicationsPage() {
                     </span>
                     <span className="font-semibold">{pub.title}</span> (
                     {pub.source})
-                    <Link href={`${pub.url}`} className="block text-blue-400">
+                    <Link target="_blank" rel="noopener noreferrer" href={`${pub.url}`} className="block text-blue-400">
                       {pub.url}
                     </Link>
                   </p>
@@ -139,7 +139,7 @@ export default function PublicationsPage() {
                     </span>
                     <span className="font-semibold">{pub.title}</span> (
                     {pub.source})
-                    <Link href={`${pub.url}`} className="block text-blue-400">
+                    <Link target="_blank" rel="noopener noreferrer" href={`${pub.url}`} className="block text-blue-400">
                       {pub.url}
                     </Link>
                   </p>
@@ -170,7 +170,7 @@ export default function PublicationsPage() {
                     </span>
                     <span className="font-semibold">{pub.title}</span> (
                     {pub.source})
-                    <Link href={`${pub.url}`} className="block text-blue-400">
+                    <Link target="_blank" rel="noopener noreferrer" href={`${pub.url}`} className="block text-blue-400">
                       {pub.url}
                     </Link>
                   </p>
