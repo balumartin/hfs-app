@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { useTransition } from "react";
 
 const languages = [
@@ -20,12 +20,9 @@ export default function LanguageSwitcher({
 
   function changeLanguage(lang: string) {
     if (lang === currentLang) return;
-    const segments = pathname.split("/").filter(Boolean);
-    if (segments.length > 0) segments[0] = lang;
-    else segments.push(lang);
-    const newPath = "/" + segments.join("/");
+
     startTransition(() => {
-      router.push(newPath);
+      router.push(pathname, { locale: lang });
     });
   }
 

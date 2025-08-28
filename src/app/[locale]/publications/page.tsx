@@ -4,7 +4,7 @@ import pageTitleEN from "@/locales/en/pageTitle.json";
 import commonHU from "@/locales/hu/common.json";
 import commonEN from "@/locales/en/common.json";
 import { useLocale } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { BookOpenIcon } from "@heroicons/react/24/outline";
 
 type Publication = {
@@ -74,7 +74,12 @@ export default function PublicationsPage() {
                     </span>
                     <span className="font-semibold">{pub.title}</span> (
                     {pub.source})
-                    <Link target="_blank" rel="noopener noreferrer" href={`${pub.url}`} className="block text-blue-400">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={`${pub.url}`}
+                      className="block text-blue-400"
+                    >
                       {pub.url}
                     </Link>
                   </p>
@@ -105,7 +110,12 @@ export default function PublicationsPage() {
                     </span>
                     <span className="font-semibold">{pub.title}</span> (
                     {pub.source})
-                    <Link target="_blank" rel="noopener noreferrer" href={`${pub.url}`} className="block text-blue-400">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={`${pub.url}`}
+                      className="block text-blue-400"
+                    >
                       {pub.url}
                     </Link>
                   </p>
@@ -139,7 +149,12 @@ export default function PublicationsPage() {
                     </span>
                     <span className="font-semibold">{pub.title}</span> (
                     {pub.source})
-                    <Link target="_blank" rel="noopener noreferrer" href={`${pub.url}`} className="block text-blue-400">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={`${pub.url}`}
+                      className="block text-blue-400"
+                    >
                       {pub.url}
                     </Link>
                   </p>
@@ -170,7 +185,12 @@ export default function PublicationsPage() {
                     </span>
                     <span className="font-semibold">{pub.title}</span> (
                     {pub.source})
-                    <Link target="_blank" rel="noopener noreferrer" href={`${pub.url}`} className="block text-blue-400">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={`${pub.url}`}
+                      className="block text-blue-400"
+                    >
                       {pub.url}
                     </Link>
                   </p>

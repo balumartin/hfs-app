@@ -1,8 +1,7 @@
 "use client";
 
 import { ChevronRightIcon, HomeIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 
 export default function BreadCrumb() {
   const pathname = usePathname();

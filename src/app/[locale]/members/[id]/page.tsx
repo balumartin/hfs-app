@@ -4,7 +4,7 @@ import membersEn from "@/locales/en/common.json";
 import pageTitleHU from "@/locales/hu/pageTitle.json";
 import pageTitleEN from "@/locales/en/pageTitle.json";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 
 type Publication = {

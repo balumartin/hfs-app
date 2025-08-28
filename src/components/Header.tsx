@@ -1,14 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/navigation";
 import clsx from "clsx";
 import navHU from "@/locales/hu/nav.json";
 import navEN from "@/locales/en/nav.json";
 import { useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useLocale } from "next-intl";
-import { usePathname } from "@/i18n/navigation";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Header() {
@@ -19,8 +18,7 @@ export default function Header() {
 
   const nav = locale === "hu" ? navHU : navEN;
 
-  const links = Object.values(nav)
-
+  const links = Object.values(nav);
 
   return (
     <header className="shadow-2xl">

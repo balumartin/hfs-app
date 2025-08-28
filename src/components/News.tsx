@@ -1,6 +1,6 @@
 import { NEWS } from "@/constants";
 import Card from "./Card";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 interface NewsProps {
   lang: string
