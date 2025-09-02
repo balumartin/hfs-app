@@ -2,6 +2,8 @@ import { inter } from "@/app/ui/fonts";
 import { getTranslations } from "next-intl/server";
 import pageTitleHU from "@/locales/hu/pageTitle.json";
 import pageTitleEN from "@/locales/en/pageTitle.json";
+import historyHu from "@/locales/hu/ourHistory.json";
+import historyEn from "@/locales/en/ourHistory.json";
 import { BookOpenIcon } from "@heroicons/react/24/outline";
 
 export default async function HistoryPage({
@@ -11,9 +13,11 @@ export default async function HistoryPage({
 }) {
   const { locale } = await params;
 
-  const t = await getTranslations({ locale, namespace: "history" });
-  const historyParts = t.raw("history") as string[];
+  const history = locale === "hu" ? historyHu : historyEn;
   const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
+
+  const historyParts = Object.values(history).flat()
+
   return (
     <main className="mx-container overflow-hidden relative mb-10">
       <div className="b-container py-6 md:px-10 px-2 ">

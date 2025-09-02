@@ -1,7 +1,7 @@
 {
-  "home": { "id": "01", "href": "/", "label": "Főoldal" },
-  "aboutus": { "id": "02", "href": "/members", "label": "Tagok" },
-  "projects": { "id": "03", "href": "/projects", "label": "Projektek" },
-  "publications": { "id": "04", "href": "/publications", "label": "Publikációk" },
-  "history": { "id": "05", "href": "/history", "label": "Történet" }
+  "home": "Főoldal",
+  "members": "Tagok",
+  "projects": "Projektek",
+  "publications": "Publikációk",
+  "history": "Történet"
 }

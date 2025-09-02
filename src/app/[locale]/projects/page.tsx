@@ -1,6 +1,10 @@
 import pageTitleHU from "@/locales/hu/pageTitle.json";
 import pageTitleEN from "@/locales/en/pageTitle.json";
 import { BookOpenIcon } from "@heroicons/react/24/outline";
+import projectHu from "@/locales/hu/projects.json";
+import projectEn from "@/locales/en/projects.json";
+import ProjectCard from "@/components/ProjectCard";
+
 
 export default async function ProjectsPage({
   params,
@@ -10,6 +14,7 @@ export default async function ProjectsPage({
   const { locale } = await params;
 
   const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
+  const projects = locale === "hu" ? projectHu : projectEn;
 
   return (
     <main className="mx-container b-container py-6 px-2 md:px-10 mb-10">
@@ -17,14 +22,13 @@ export default async function ProjectsPage({
         <BookOpenIcon className="w-6 inline-block" />
         <span>{pageTitle.projects}</span>
       </h1>
-      <div className="flexCenter flex-col  min-h-screen">
-        <h2 className="text-5xl font-bold mb-4">
-          🚧 Oldal fejlesztés alatt 🚧
-        </h2>
-        <p className="text-lg text-gray-700">
-          Ez az oldal hamarosan elérhető lesz.
-        </p>
+      <section className="">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map(project => (
+          <ProjectCard key={project.id} {...project} />
+        ))}
       </div>
+      </section>
     </main>
   );
 }

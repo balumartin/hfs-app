@@ -1,8 +1,10 @@
 import MemberCard from "@/components/MemberCard";
-import { getTranslations } from "next-intl/server";
 import pageTitleHU from "@/locales/hu/pageTitle.json";
 import pageTitleEN from "@/locales/en/pageTitle.json";
 import { UsersIcon } from "@heroicons/react/24/outline";
+import membersHu from "@/locales/hu/common.json";
+import membersEn from "@/locales/en/common.json";
+import { MembersData } from "@/app/types/members";
 
 export default async function MembersPage({
   params,
@@ -11,31 +13,13 @@ export default async function MembersPage({
 }) {
   const { locale } = await params;
 
-  const t = await getTranslations({
-    locale,
-    namespace: "common",
-  });
+  const membersHuData: MembersData = membersHu;
+  const membersEnData: MembersData = membersEn;
 
+  const common = locale === "hu" ? membersHuData : membersEnData;
   const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
 
-  type Publication = {
-    year: string;
-    title: string;
-    source: string;
-    lang: string;
-  };
-
-  type Member = {
-    name: string;
-    post: string;
-    profileImg: string;
-    bio: string;
-    publications: Publication[];
-  };
-
-  type Members = Record<string, Member>;
-
-  const members = t.raw("members") as Members;
+  const members = common.members;
   const membersArray = Object.entries(members);
 
   return (
@@ -47,8 +31,8 @@ export default async function MembersPage({
         </h1>
 
         <div className="grid md:grid-cols-2 gap-4">
-          {membersArray.map(([id, members]) => (
-            <MemberCard key={id} memberDetail={{ id, ...members }} />
+          {membersArray.map(([id, member]) => (
+            <MemberCard key={id} memberDetail={{ id, ...member }} />
           ))}
         </div>
       </div>
