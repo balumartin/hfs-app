@@ -33,9 +33,9 @@ export default function LanguageSwitcher({
   return (
     <div className="relative inline-block w-full flexEnd mr-4">
       {currentLang === "hu" ? (
-        <Image src="/hu.png" alt="hungarianflag" width={24} height={18} />
+        <Image src="/hu.png" alt="hungarianflag" width={20} height={15} />
       ) : (
-        <Image src="/gb.png" alt="britishflag" width={24} height={18} />
+        <Image src="/gb.png" alt="britishflag" width={20} height={15} />
       )}
       <select
         value={currentLang}

@@ -6,25 +6,7 @@ import pageTitleEN from "@/locales/en/pageTitle.json";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
-
-type Publication = {
-  year: string;
-  title: string;
-  source: string;
-  lang: string;
-};
-
-type Member = {
-  name: string;
-  post: string;
-  profileImg: string;
-  bio: string;
-  publications: Publication[];
-};
-
-type MembersData = {
-  members: Record<string, Member>;
-};
+import { MembersData } from "@/app/types/members";
 
 export default async function MemberDetailsPage({
   params,
@@ -35,8 +17,8 @@ export default async function MemberDetailsPage({
 
   const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
 
-  const membersHuData = membersHu as MembersData;
-  const membersEnData = membersEn as MembersData;
+  const membersHuData: MembersData = membersHu;
+  const membersEnData: MembersData = membersEn;
 
   const membersData = locale === "hu" ? membersHuData : membersEnData;
   const member = membersData.members[id];

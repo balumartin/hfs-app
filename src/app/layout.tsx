@@ -11,10 +11,14 @@ export const metadata: Metadata = {
     "A Magyar Szómaesztétikai Fórum hivatalos weboldala – kutatások, események, publikációk és tagok bemutatása.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="hu" className={`${inter.className} antialised scroll-smooth`}>
-      <body>{children}</body>
+    <html lang="hu" className="scroll-smooth">
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
