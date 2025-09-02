@@ -1,12 +1,10 @@
 "use client";
 
-import { Link } from "@/i18n/navigation";
-import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 
 type ImageSliderProps = {
-  imageUrls: { name: string; imageUrl: string; link: string }[];
+  imageUrls: { name: string; title: string; imageUrl: string; link: string }[];
 };
 
 export default function ImageSlider({ imageUrls }: ImageSliderProps) {
@@ -31,7 +29,7 @@ export default function ImageSlider({ imageUrls }: ImageSliderProps) {
         {" "}
         Projects <ArrowRightIcon width={20} />
       </Link> */}
-      <div className="relative h-[500px] rounded overflow-hidden cursor-pointer transition-all duration-100 delay-100 ease-out">
+      <div className="relative h-[500px] lg:rounded overflow-hidden cursor-pointer transition-all duration-100 delay-100 ease-out">
         <div
           className="flex transition-transform duration-1000 ease-in-out"
           style={{ transform: `translateX(-${imgIdx * 100}%)` }}
@@ -63,7 +61,7 @@ export default function ImageSlider({ imageUrls }: ImageSliderProps) {
         href={imageUrls[imgIdx]?.link}
         className="relative flexCenter h-6 text-sm text-blue-500 hover:text-blue-600 hover:underline"
       >
-        {imageUrls[imgIdx]?.link}
+        {imageUrls[imgIdx]?.title}
       </a>
     </section>
   );
