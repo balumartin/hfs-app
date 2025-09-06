@@ -307,7 +307,7 @@
         {
           "year": "2015",
           "title": "“Rorty’s and Shusterman’s Notion of the Self”",
-          "source": "Pragmaism Today, Vol. 6, Issue 1, pp. 67-75.",
+          "source": "Pragmatism Today, Vol. 6, Issue 1, pp. 67-75.",
           "lang": "en",
           "url": "http://www.pragmatismtoday.eu/index.php?id=2015summer1"
         },
@@ -545,6 +545,15 @@
           "lang": "en",
           "url": ""
         }
+      ]
+    },
+    "SekulicLarissa": {
+      "name": "Sekulić Larisa",
+      "post": "A Szegedi Tudományegyetem Málnási Bartók György Filozófia Doktori Iskolájában szerzett PhD fokozatot 2025-ben.",
+      "profileImg": "/person/Sekulic.jpeg",
+      "bio": "A Szegedi Tudományegyetem Málnási Bartók György Filozófia Doktori Iskolájában szerzett PhD fokozatot 2025-ben. Kutatási területe Richard Shusterman szómaesztétikája, s annak kapcsolata a neopragmatizmus nyelvi elemeivel. Aktívan foglalkozik John Dewey tapasztalatcentrikus művészetfilozófiájával, különös tekintettel Dewey szómaesztétikára gyakorolt hatásával. További érdeklődési területei közé tartozik a test filozófiája és a neuroesztétika. Jelenleg a Szegedi Tudományegyetem Bartók Béla Művészeti Karának óraadója." ,
+      "publications":[
+        
       ]
     }
   }

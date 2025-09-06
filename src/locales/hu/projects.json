@@ -5,7 +5,8 @@
     "description": "Conference in dialogue between post-disciplinary fields",
     "image": "/projects/design-culture.jpg",
     "date": "2019 May 6-8",
-    "location": "MOME, Budapest"
+    "location": "MOME, Budapest",
+    "link" : "https://api.mome.hu/uploads/2019_Design_culture_and_Somaesthetics_booklet_2eadde6cb8.pdf"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "description": "",
     "image": "/projects/promise-pragmatist.webp",
     "date": "2022 May 25-28",
-    "location": "MOME, Budapest"
+    "location": "MOME, Budapest",
+    "link" : "https://pae30.mome.hu/"
   },
   {
     "id": 3,
@@ -21,6 +23,7 @@
     "description": "This conference ambitions to call on a dialogue between outstanding experts in some neighboring fields that are relevant to get a better knowledge and use of architectural and spatial atmospheres, both in material and digital realms.",
     "image": "/projects/atmospheres.webp",
     "date": "2025 Febr 10-12",
-    "location": "MOME, Budapest"
+    "location": "MOME, Budapest",
+    "link" : "https://mome.hu/en/atmospheres-and-architectonics-conference"
   }
 ]

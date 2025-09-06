@@ -23,6 +23,18 @@ export default async function MemberDetailsPage({
   const membersData = locale === "hu" ? membersHuData : membersEnData;
   const member = membersData.members[id];
 
+  const descPublications = member.publications.sort((a, b) => {
+    const aYear = parseInt(a.year);
+    const bYear = parseInt(b.year);
+
+    if (aYear === 0 && bYear !== 0) return -1;
+    if (bYear === 0 && aYear !== 0) return 1;
+
+    return bYear - aYear;
+  });
+
+  console.log(descPublications);
+
   if (!member) return notFound();
 
   return (
@@ -50,13 +62,29 @@ export default async function MemberDetailsPage({
               {pageTitle.publications}
             </h2>
             <ul className="mt-4 px-4 list-disc list-inside">
-              {member.publications.map((p: any, i: number) => (
+              {descPublications.map((p: any, i: number) => (
                 <li key={i} className="list-outside text-start pl-4 mt-2">
+                  {p.year === "0" ? (
+                    <span className="text-sm text-gray-500">
+                      (forthcoming) -{" "}
+                    </span>
+                  ) : (
+                    <span className="text-sm text-gray-500">({p.year}) - </span>
+                  )}
                   <span className="font-medium">
-                    <Link href="#">{p.title}</Link>
+                    {p.url.length > 1 ? (
+                      <Link
+                        target="_about"
+                        href={p.url}
+                        className="text-blue-600 cursor-pointer hover:underline"
+                      >
+                        {p.title}
+                      </Link>
+                    ) : (
+                      <span>{p.title}</span>
+                    )}
                   </span>{" "}
-                  <span className="font-medium">{p.source}</span>{" "}
-                  <span className="text-sm text-gray-500">({p.year})</span>
+                  <span className="font-basic">{p.source}</span>{" "}
                 </li>
               ))}
             </ul>

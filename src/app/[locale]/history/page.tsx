@@ -1,5 +1,4 @@
 import { inter } from "@/app/ui/fonts";
-import { getTranslations } from "next-intl/server";
 import pageTitleHU from "@/locales/hu/pageTitle.json";
 import pageTitleEN from "@/locales/en/pageTitle.json";
 import historyHu from "@/locales/hu/ourHistory.json";

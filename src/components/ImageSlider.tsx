@@ -59,7 +59,7 @@ export default function ImageSlider({ imageUrls }: ImageSliderProps) {
       <a
         target="_blank"
         href={imageUrls[imgIdx]?.link}
-        className="relative flexCenter h-6 text-sm text-blue-500 hover:text-blue-600 hover:underline"
+        className="relative flexCenter h-4 text-xs w-max italic mx-auto text-slate-500 hover:text-blue-600 hover:underline"
       >
         {imageUrls[imgIdx]?.title}
       </a>

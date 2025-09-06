@@ -20,7 +20,7 @@ export const IMAGES = [
     name: "design-culture",
     title: "Design culture and somaesthetics conference Budapest",
     imageUrl: "/projects/design-culture.jpg",
-    link: "",
+    link: "https://api.mome.hu/uploads/2019_Design_culture_and_Somaesthetics_booklet_2eadde6cb8.pdf",
   },
   {
     name: "promise-pragmatist",
