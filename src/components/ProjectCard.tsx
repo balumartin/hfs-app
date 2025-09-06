@@ -20,7 +20,8 @@ export default function ProjectCard({
 }: ProjectProps) {
   return (
     <Link
-      target="about"
+      target="_blank"
+      rel="noreferrer"
       href={link}
       className="flex flex-col bg-white shadow-md rounded overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >

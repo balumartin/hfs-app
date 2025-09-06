@@ -549,11 +549,59 @@
     },
     "SekulicLarissa": {
       "name": "Sekulić Larisa",
-      "post": "A Szegedi Tudományegyetem Málnási Bartók György Filozófia Doktori Iskolájában szerzett PhD fokozatot 2025-ben.",
+      "post": "Philosopher, lecturer at the University of Szeged.",
       "profileImg": "/person/Sekulic.jpeg",
-      "bio": "A Szegedi Tudományegyetem Málnási Bartók György Filozófia Doktori Iskolájában szerzett PhD fokozatot 2025-ben. Kutatási területe Richard Shusterman szómaesztétikája, s annak kapcsolata a neopragmatizmus nyelvi elemeivel. Aktívan foglalkozik John Dewey tapasztalatcentrikus művészetfilozófiájával, különös tekintettel Dewey szómaesztétikára gyakorolt hatásával. További érdeklődési területei közé tartozik a test filozófiája és a neuroesztétika. Jelenleg a Szegedi Tudományegyetem Bartók Béla Művészeti Karának óraadója." ,
-      "publications":[
-        
+      "bio": "Larisa Sekulić, philosopher, lecturer at the University of Szeged. Larisa obtained her PhD from the Doctoral School of Philosophy at the University of Szeged in 2025. Her research focuses on Richard Shusterman's somaesthetics and its relationship to the linguistic elements of neopragmatism. She is actively involved in John Dewey's experience-centered philosophy of art, with a particular focus on Dewey's influence on somaesthetics. Her other areas of interest include the philosophy of the body and neuroaesthetics. She is currently a lecturer at the Béla Bartók Faculty of Arts at the University of Szeged.",
+      "publications": [
+        {
+          "year": "2016",
+          "title": "„A kígyó mérge”.",
+          "source": "Híd. 2016: 9. 115-119.",
+          "lang": "hu",
+          "url": ""
+        },
+        {
+          "year": "2019",
+          "title": "„A megfoghatatlan tapasztalata”.",
+          "source": "Híd. 2019:11. 126-130.",
+          "lang": "hu",
+          "url": ""
+        },
+        {
+          "year": "2020",
+          "title": "„Értekezés erőszakról és hatalomról”.",
+          "source": "Létünk. 2020:3. 129-144.",
+          "lang": "hu",
+          "url": ""
+        },
+        {
+          "year": "2022",
+          "title": "„Reconsidering the notion of Art”.",
+          "source": "Pragmatism Today. 2022: Vol.13.1. 78-85.",
+          "lang": "en",
+          "url": ""
+        },
+        {
+          "year": "2023",
+          "title": "„Az erőszak normalizálásának színháza”.",
+          "source": "Létünk. 2023:3-4.117-128.",
+          "lang": "hu",
+          "url": ""
+        },
+        {
+          "year": "2023",
+          "title": "„A populáris művészetek helye az esztétikaelméletben”.",
+          "source": "Híd. 2023:7-8. 183-201.",
+          "lang": "hu",
+          "url": ""
+        },
+        {
+          "year": "2025",
+          "title": "„Test és filozófia”",
+          "source": "Híd. 2025:7-8.",
+          "lang": "hu",
+          "url": ""
+        }
       ]
     }
   }

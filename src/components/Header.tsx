@@ -70,8 +70,8 @@ export default function Header() {
               >
                 <span
                   className={clsx(
-                    "absolute bottom-3 w-0  h-px bg-black transition-all duration-300 ease-out",
-                    isActive ? "" : "group-hover:w-[81%]"
+                    "absolute bottom-3 w-0 h-[1px] bg-slate-600 transition-all duration-300 ease-out",
+                    isActive ? "" : "group-hover:w-[80%]"
                   )}
                 />
                 {link.label}
