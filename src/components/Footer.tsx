@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="w-full h-20 flexCenter bg-black py-4">
       <p className="text-sm text-white">
-        © {currentYear}{` `}{t("title")}
+        © {currentYear}{` balumartin. `}{t("title")}
       </p>
     </footer>
   );

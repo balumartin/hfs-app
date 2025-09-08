@@ -4,6 +4,7 @@ import pageTitleEN from "@/locales/en/pageTitle.json";
 import historyHu from "@/locales/hu/ourHistory.json";
 import historyEn from "@/locales/en/ourHistory.json";
 import { BookOpenIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 export default async function HistoryPage({
   params,
@@ -15,17 +16,17 @@ export default async function HistoryPage({
   const history = locale === "hu" ? historyHu : historyEn;
   const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
 
-  const historyParts = Object.values(history).flat()
+  const historyParts = Object.values(history).flat();
 
   return (
     <main className="mx-container overflow-hidden relative mb-10">
       <div className="b-container py-6 md:px-10 px-2 ">
         <h1 className="mb-5 flexStart gap-2 text-2xl border-b border-slate-200 text-slate-700">
           <BookOpenIcon className="w-6 inline-block" />
-          <span>{pageTitle.history}</span>
+          <span className="z-50">{pageTitle.history}</span>
         </h1>
         <div
-          className={`${inter.className} relative z-40 leading-relaxed flexStart flex-col gap-3 p-4 `}
+          className={`${inter.className} relative z-50 leading-relaxed flexStart flex-col gap-3 p-4 `}
         >
           {historyParts.map((part, i) => (
             <p key={i} className="mb-2">
@@ -33,32 +34,40 @@ export default async function HistoryPage({
             </p>
           ))}
         </div>
-        <div className="absolute top-2 blur-sm -right-16 w-[500px] h-auto z-10 scale-y-[-1] opacity-55">
-          <img
+        <div className="absolute top-2 blur-sm -right-16 w-[500px] h-[310px] z-10 scale-y-[-1] opacity-55">
+          <Image
             src="/hand_transparent.png"
             alt="hand image"
-            className="inline"
+            className="inline object-cover"
+            sizes="auto"
+            fill
           />
         </div>
-        <div className="absolute top-[33%] blur-sm -left-12 w-[500px] h-auto z-10 opacity-55">
-          <img
+        <div className="absolute top-[33%] blur-sm -left-12 w-[500px] h-[310px]  z-10 opacity-55">
+          <Image
             src="/hand_transparent.png"
             alt="hand image"
             className="inline scale-x-[-1]"
+            sizes="auto"
+            fill
           />
         </div>
-        <div className="absolute top-[66%]  blur-sm -right-12 w-[500px] h-auto z-10 scale-y-[-1] opacity-55">
-          <img
+        <div className="absolute top-[66%]  blur-sm -right-12 w-[500px] h-[310px] z-10 scale-y-[-1] opacity-55">
+          <Image
             src="/hand_transparent.png"
             alt="hand image"
             className="inline"
+            sizes="auto"
+            fill
           />
         </div>
-        <div className="absolute top-[90%] blur-sm -left-12 w-[500px] h-auto z-10 opacity-55">
-          <img
+        <div className="absolute top-[90%] blur-sm -left-12 w-[500px] h-[310px] z-10 opacity-55">
+          <Image
             src="/hand_transparent.png"
             alt="hand image"
             className="inline scale-x-[-1]"
+            sizes="auto"
+            fill
           />
         </div>
       </div>

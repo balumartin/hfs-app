@@ -60,7 +60,7 @@ export default async function MemberDetailsPage({
               {pageTitle.publications}
             </h2>
             <ul className="mt-4 px-4 list-disc list-inside">
-              {descPublications.map((p: any, i: number) => (
+              {descPublications.map((p, i) => (
                 <li key={i} className="list-outside text-start pl-4 mt-2">
                   {p.year === "0" ? (
                     <span className="text-sm text-gray-500">
@@ -70,10 +70,10 @@ export default async function MemberDetailsPage({
                     <span className="text-sm text-gray-500">({p.year}) - </span>
                   )}
                   <span className="font-medium">
-                    {p.url.length > 1 ? (
+                    {p.url && p.url.length > 1 ? (
                       <Link
                         target="_about"
-                        href={p.url}
+                        href={p.url || "#"}
                         className="text-blue-600 cursor-pointer hover:underline"
                       >
                         {p.title}
@@ -88,11 +88,13 @@ export default async function MemberDetailsPage({
             </ul>
           </div>
 
-          <div className="max-lg:hidden w-[300px] h-auto rounded overflow-hidden">
-            <img
+          <div className="relative max-lg:hidden w-[300px] h-[400px] rounded overflow-hidden">
+            <Image
               src={member.profileImg}
               alt={member.name}
-              className="bg-center bg-cover w-full h-full"
+              className="object-cover"
+              sizes="auto"
+              fill
             />
           </div>
         </div>

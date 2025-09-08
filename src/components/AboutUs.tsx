@@ -1,6 +1,8 @@
 import { cormorant, inter } from "@/app/ui/fonts";
 import Button from "@/app/ui/button";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
+import { getRandomMembers } from "@/app/utils/randomMembers";
 
 interface AboutUsProps {
   lang: string;
@@ -9,6 +11,8 @@ interface AboutUsProps {
 
 export default async function AboutUs({ lang, members }: AboutUsProps) {
   const t = await getTranslations({ locale: lang, namespace: "about" });
+
+  const randomMembers = getRandomMembers(members, 8);
   return (
     <section className="mx-container mb-10 lg:h-[600px] h-auto bg-white rounded shadow-xl">
       <div className="lg:flexCenter h-full md:p-16 p-4 gap-8">
@@ -21,9 +25,6 @@ export default async function AboutUs({ lang, members }: AboutUsProps) {
           >
             {t("heading")}
           </h2>
-          {/* <blockquote  className={`${inter.className} mt-6 italic text-slate-500 border-l-4 border-slate-300 pl-4`}>
-            {content.aboutus}
-          </blockquote > */}
           <article
             className={`${inter.className} mt-4 text-sm lg:text-base text-start`}
           >
@@ -39,15 +40,17 @@ export default async function AboutUs({ lang, members }: AboutUsProps) {
           </div>
         </div>
         <div className="lg:w-[384px] lg:h-[384px] max-md:gap-2 max-lg:flexCenter max-lg:pt-5 flex flex-wrap flex-row-reverse">
-          {members.map((member) => (
+          {randomMembers.map((member) => (
             <div
               key={member.name}
-              className="group w-32 h-32 max-md:rounded max-md:overflow-hidden "
+              className="relative group w-32 h-32 max-md:rounded max-md:overflow-hidden "
             >
-              <img
+              <Image
                 src={member.profileImg}
                 alt={member.name}
-                className="w-full h-full object-cover aspect-square group-hover:scale-x-[-1] duration-200 transition-transform"
+                className="object-cover aspect-square group-hover:scale-x-[-1] duration-200 transition-transform"
+                sizes="auto"
+                fill
               />
             </div>
           ))}

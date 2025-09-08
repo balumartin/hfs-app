@@ -3,6 +3,7 @@ export type Publication = {
   title: string;
   source: string;
   lang: string;
+  url?: string;
 };
 
 export type Member = {

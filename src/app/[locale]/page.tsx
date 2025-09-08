@@ -1,7 +1,7 @@
 import AboutUs from "@/components/AboutUs";
 import ImageSlider from "@/components/ImageSlider";
 
-import { MEMBERS } from "@/constants";
+import { MEMBERS_PICS } from "@/constants";
 import { IMAGES } from "@/constants";
 
 export function generateStaticParams() {
@@ -18,7 +18,7 @@ export default async function HomePage({
   return (
     <main className="flex min-h-screen flex-col lg:p-6">
       <div className="mx-auto z-0">
-        <AboutUs lang={locale} members={MEMBERS} />
+        <AboutUs lang={locale} members={MEMBERS_PICS} />
         <ImageSlider imageUrls={IMAGES} />
       </div>
     </main>
