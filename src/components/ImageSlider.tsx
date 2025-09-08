@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import { useState } from "react";
 
 type ImageSliderProps = {
@@ -25,22 +26,23 @@ export default function ImageSlider({ imageUrls }: ImageSliderProps) {
 
   return (
     <section className="mx-container w-full mt-16 mb-10 overflow-hidden ">
-      {/* <Link href="/projects" className="flexEnd pb-2">
-        {" "}
-        Projects <ArrowRightIcon width={20} />
-      </Link> */}
       <div className="relative h-[500px] lg:rounded overflow-hidden cursor-pointer transition-all duration-100 delay-100 ease-out">
         <div
-          className="flex transition-transform duration-1000 ease-in-out"
+          className="relative flex transition-transform duration-1000 ease-in-out "
           style={{ transform: `translateX(-${imgIdx * 100}%)` }}
         >
           {imageUrls.map((img) => (
-            <img
+            <div
               key={img.imageUrl}
-              src={img.imageUrl}
-              className="w-full h-[500px] object-cover flex-shrink-0"
-              alt={img.name}
-            />
+              className="relative w-full h-[500px] flex-shrink-0"
+            >
+              <Image
+                src={img.imageUrl}
+                alt={img.name}
+                fill
+                className="object-cover"
+              />
+            </div>
           ))}
         </div>
         <button

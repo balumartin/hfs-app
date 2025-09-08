@@ -23,6 +23,8 @@ export default async function MemberDetailsPage({
   const membersData = locale === "hu" ? membersHuData : membersEnData;
   const member = membersData.members[id];
 
+  if (!member) return notFound();
+  
   const descPublications = member.publications.sort((a, b) => {
     const aYear = parseInt(a.year);
     const bYear = parseInt(b.year);
@@ -32,8 +34,6 @@ export default async function MemberDetailsPage({
 
     return bYear - aYear;
   });
-
-  if (!member) return notFound();
 
   return (
     <main className="mx-container">
