@@ -4,7 +4,7 @@ import pageTitleEN from "@/locales/en/pageTitle.json";
 import commonHU from "@/locales/hu/common.json";
 import commonEN from "@/locales/en/common.json";
 import sortHu from "@/locales/hu/sort.json";
-import sortEn from "@/locales/En/sort.json";
+import sortEn from "@/locales/en/sort.json";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
