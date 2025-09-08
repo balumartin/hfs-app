@@ -3,6 +3,8 @@ import pageTitleHU from "@/locales/hu/pageTitle.json";
 import pageTitleEN from "@/locales/en/pageTitle.json";
 import commonHU from "@/locales/hu/common.json";
 import commonEN from "@/locales/en/common.json";
+import sortHu from "@/locales/hu/sort.json";
+import sortEn from "@/locales/En/sort.json";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
@@ -38,6 +40,7 @@ export default function PublicationsPage() {
 
   const common = locale === "hu" ? commonHU : commonEN;
   const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
+  const sortTitle = locale === "hu" ? sortHu : sortEn;
 
   const members: Members = common.members;
 
@@ -79,7 +82,7 @@ export default function PublicationsPage() {
         </h1>
         <div>
           <label htmlFor="sortOrder" className="mr-2 font-medium">
-            Rendezés:
+            {sortTitle.label}
           </label>
           <select
             id="sortOrder"
@@ -87,8 +90,8 @@ export default function PublicationsPage() {
             onChange={(e) => setOrder(e.target.value as "asc" | "desc")}
             className="hover:bg-gray-100 border text-gray-700 py-1 pl-1 pr-2 rounded cursor-pointer text-sm"
           >
-            <option value="asc">Év szerint növekvő</option>
-            <option value="desc">Év szerint csökkenő</option>
+            <option value="asc">{sortTitle.asc}</option>
+            <option value="desc">{sortTitle.desc}</option>
           </select>
         </div>
       </div>

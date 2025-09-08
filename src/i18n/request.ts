@@ -11,9 +11,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const common = (await import(`../locales/${locale}/common.json`)).default;
   const nav = (await import(`../locales/${locale}/nav.json`)).default;
   const about = (await import(`../locales/${locale}/about.json`)).default;
-  const history = (await import (`../locales/${locale}/ourHistory.json`)).default
-  const footer = (await import (`../locales/${locale}/footer.json`)).default
-
+  const history = (await import(`../locales/${locale}/ourHistory.json`))
+    .default;
+  const footer = (await import(`../locales/${locale}/footer.json`)).default;
 
   return {
     locale,

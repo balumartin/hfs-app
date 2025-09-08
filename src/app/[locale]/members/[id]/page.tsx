@@ -33,8 +33,6 @@ export default async function MemberDetailsPage({
     return bYear - aYear;
   });
 
-  console.log(descPublications);
-
   if (!member) return notFound();
 
   return (

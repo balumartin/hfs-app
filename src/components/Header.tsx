@@ -50,7 +50,7 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <nav className="z-40 hidden w-full xl:mx-container xl:rounded overflow-hidden md:translate-y-1/2 lg:flexStart md:h-[50px] bg-black text-white text-md tracking-wide font-medium">
+        <nav className="z-40 hidden w-full xl:mx-container xl:rounded overflow-hidden md:-mt-[25px] md:translate-y-1/2 lg:flexStart md:h-[50px] bg-black text-white text-md tracking-wide font-medium">
           {links.map((link) => {
             const isActive =
               link.href === "/"
