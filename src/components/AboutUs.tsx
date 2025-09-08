@@ -21,12 +21,12 @@ export default async function AboutUs({ lang, members }: AboutUsProps) {
             {t("title")}
           </h1>
           <h2
-            className={`${cormorant.className} text-4xl md:text-6xl lg:text-7xl text-black`}
+            className={`${cormorant.className} max-md:my-2 text-4xl md:text-6xl lg:text-7xl text-black`}
           >
             {t("heading")}
           </h2>
           <article
-            className={`${inter.className} mt-4 text-sm lg:text-base text-start`}
+            className={`${inter.className} md:mt-4 text-sm lg:text-base text-start`}
           >
             {t("aboutus")}
           </article>

@@ -54,8 +54,11 @@ export default function PublicationsPage() {
   const huPublications = allPublications
     .filter((pub) => pub.lang === "hu")
     .sort((a, b) => {
-      const yearA = parseInt(a.year, 10);
-      const yearB = parseInt(b.year, 10);
+      const yearA = parseInt(a.year);
+      const yearB = parseInt(b.year);
+
+      if (yearA === 0 && yearB !== 0) return -1;
+      if (yearB === 0 && yearA !== 0) return 1;
 
       return order === "asc" ? yearA - yearB : yearB - yearA;
     });
@@ -63,25 +66,32 @@ export default function PublicationsPage() {
   const enPublications = allPublications
     .filter((pub) => pub.lang === "en")
     .sort((a, b) => {
-      const yearA = parseInt(a.year, 10);
-      const yearB = parseInt(b.year, 10);
+      const yearA = parseInt(a.year);
+      const yearB = parseInt(b.year);
+
+      if (yearA === 0 && yearB !== 0) return -1;
+      if (yearB === 0 && yearA !== 0) return 1;
 
       return order === "asc" ? yearA - yearB : yearB - yearA;
     });
+
   const actuallyLang =
     locale === "hu"
       ? [huPublications, enPublications]
       : [enPublications, huPublications];
 
   return (
-    <main className="mx-container b-container py-6 px-2 md:px-10 mb-10">
-      <div className="flexBetween border-b mb-5 border-slate-200">
+    <main className="mx-container b-container py-6 sm:px-2 md:px-10 mb-10">
+      <div className="flexBetween border-b px-2 sm:px-0 mb-5 border-slate-200">
         <h1 className=" flexStart gap-2 text-2xl text-slate-700">
           <BookOpenIcon className="w-6 inline-block" />
           <span>{pageTitle.publications}</span>
         </h1>
-        <div>
-          <label htmlFor="sortOrder" className="mr-2 font-medium">
+        <div className="max-sm:flexStart max-sm:flex-col">
+          <label
+            htmlFor="sortOrder"
+            className="mr-2 font-medium w-full max-sm:hidden max-sm:pl-2 max-sm:text-sm"
+          >
             {sortTitle.label}
           </label>
           <select
@@ -95,15 +105,75 @@ export default function PublicationsPage() {
           </select>
         </div>
       </div>
-      <div>
-        <div className="b-container py-6 md:px-10 px-2 mb-10">
-          <h3 className="text-md mb-4 text-center font-semibold border-b-2 w-max">
+      <div className="b-container py-6 md:px-10 px-2 mb-10">
+        <h3 className="text-md mb-4 text-center font-semibold border-b-2 w-max">
+          {locale === "hu"
+            ? "Magyar nyelven megjelent publikációk"
+            : "Publications published in English"}
+        </h3>
+        <ol className="list-decimal max-md:mx-2 md:ml-4 pl-4 space-y-6">
+          {actuallyLang[0].map((pub, index) => (
+            <li
+              key={`${pub.author}-${index}`}
+              className="text-md max-md:text-sm"
+            >
+              <p>
+                <span>
+                  {pub.author}
+                  {", "}
+                  <span className="text-sm">
+                    {pub.year === "0" ? "(forthcoming)" : `(${pub.year})`}
+                  </span>{" "}
+                  -{" "}
+                </span>
+                <span className="font-semibold">{pub.title}</span> ({pub.source}
+                )
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`${pub.url}`}
+                  className="block text-blue-400 break-words"
+                >
+                  {pub.url}
+                </Link>
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div
+        className={clsx(
+          "",
+          isOpen
+            ? `b-container py-6 md:px-10 px-2 mb-10`
+            : `b-container py-6 md:px-10 px-2`
+        )}
+      >
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={clsx(
+            "w-full flex justify-between items-center",
+            isOpen ? `border-b-2 pb-2 mb-4` : `hover:underline`
+          )}
+        >
+          <h3 className="text-md text-center font-semibold">
             {locale === "hu"
-              ? "Magyar nyelven megjelent publikációk"
-              : "Publications published in English"}
+              ? "Angol nyelven megjelent publikációk"
+              : "Publications published in Hungarian"}
           </h3>
+          {isOpen ? (
+            <ChevronUpIcon
+              className="  hover:text-black"
+              width={18}
+              height={18}
+            />
+          ) : (
+            <ChevronDownIcon width={16} />
+          )}
+        </button>
+        {isOpen && (
           <ol className="list-decimal max-md:mx-2 md:ml-4 pl-4 space-y-6">
-            {actuallyLang[0].map((pub, index) => (
+            {actuallyLang[1].map((pub, index) => (
               <li
                 key={`${pub.author}-${index}`}
                 className="text-md max-md:text-sm"
@@ -131,69 +201,7 @@ export default function PublicationsPage() {
               </li>
             ))}
           </ol>
-        </div>
-        <div
-          className={clsx(
-            "",
-            isOpen
-              ? `b-container py-6 md:px-10 px-2 mb-10`
-              : `b-container py-6 md:px-10 px-2`
-          )}
-        >
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className={clsx(
-              "w-full flex justify-between items-center",
-              isOpen ? `border-b-2 pb-2 mb-4` : `hover:underline`
-            )}
-          >
-            <h3 className="text-md text-center font-semibold">
-              {locale === "hu"
-                ? "Angol nyelven megjelent publikációk"
-                : "Publications published in Hungarian"}
-            </h3>
-            {isOpen ? (
-              <ChevronUpIcon
-                className="  hover:text-black"
-                width={18}
-                height={18}
-              />
-            ) : (
-              <ChevronDownIcon width={16} />
-            )}
-          </button>
-          {isOpen && (
-            <ol className="list-decimal max-md:mx-2 md:ml-4 pl-4 space-y-6">
-              {actuallyLang[1].map((pub, index) => (
-                <li
-                  key={`${pub.author}-${index}`}
-                  className="text-md max-md:text-sm"
-                >
-                  <p>
-                    <span>
-                      {pub.author}
-                      {", "}
-                      <span className="text-sm">
-                        {pub.year === "0" ? "(forthcoming)" : `(${pub.year})`}
-                      </span>{" "}
-                      -{" "}
-                    </span>
-                    <span className="font-semibold">{pub.title}</span> (
-                    {pub.source})
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={`${pub.url}`}
-                      className="block text-blue-400"
-                    >
-                      {pub.url}
-                    </Link>
-                  </p>
-                </li>
-              ))}
-            </ol>
-          )}
-        </div>
+        )}
       </div>
     </main>
   );

@@ -1,27 +1,17 @@
 import enCommon from "@/locales/en/common.json";
+import projects from "@/locales/en/projects.json"
 
 export const MEMBERS_PICS = Object.values(enCommon.members).map((member) => ({
   profileImg: member.profileImg,
   name: member.name,
 }));
 
-export const IMAGES = [
-  {
-    name: "atmospheres",
-    title: "Atmospheres and Architectonics",
-    imageUrl: "/projects/atmospheres.webp",
-    link: "https://mome.hu/en/atmospheres-and-architectonics-conference",
-  },
-  {
-    name: "design-culture",
-    title: "Design culture and somaesthetics conference Budapest",
-    imageUrl: "/projects/design-culture.jpg",
-    link: "https://api.mome.hu/uploads/2019_Design_culture_and_Somaesthetics_booklet_2eadde6cb8.pdf",
-  },
-  {
-    name: "promise-pragmatist",
-    title: "THE PROMISE OF PRAGMATIST AESTHETICS",
-    imageUrl: "/projects/promise-pragmatist.webp",
-    link: "https://pae30.mome.hu/",
-  },
-];
+export const IMAGES = projects
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 3)
+  .map((p) => ({
+    name: p.title.toLowerCase().replace(/\s+/g, "-"),
+    title: p.title.replace(/:.*$/, ""),
+    imageUrl: p.image,
+    link: p.link,
+  }));
