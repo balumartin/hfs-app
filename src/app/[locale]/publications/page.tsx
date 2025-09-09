@@ -1,6 +1,6 @@
 "use client";
-import pageTitleHU from "@/locales/hu/pageTitle.json";
-import pageTitleEN from "@/locales/en/pageTitle.json";
+import navHU from "@/locales/hu/nav.json";
+import navEN from "@/locales/en/nav.json";
 import commonHU from "@/locales/hu/common.json";
 import commonEN from "@/locales/en/common.json";
 import sortHu from "@/locales/hu/sort.json";
@@ -39,7 +39,7 @@ export default function PublicationsPage() {
   const locale = useLocale();
 
   const common = locale === "hu" ? commonHU : commonEN;
-  const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
+  const pageTitle = locale === "hu" ? navHU : navEN;
   const sortTitle = locale === "hu" ? sortHu : sortEn;
 
   const members: Members = common.members;
@@ -54,25 +54,25 @@ export default function PublicationsPage() {
   const huPublications = allPublications
     .filter((pub) => pub.lang === "hu")
     .sort((a, b) => {
-      const yearA = parseInt(a.year);
-      const yearB = parseInt(b.year);
+      const aYear = parseInt(a.year);
+      const bYear = parseInt(b.year);
 
-      if (yearA === 0 && yearB !== 0) return -1;
-      if (yearB === 0 && yearA !== 0) return 1;
+      if (aYear === 0 && bYear !== 0) return -1;
+      if (bYear === 0 && aYear !== 0) return 1;
 
-      return order === "asc" ? yearA - yearB : yearB - yearA;
+      return order === "asc" ? aYear - bYear : bYear - aYear;
     });
 
   const enPublications = allPublications
     .filter((pub) => pub.lang === "en")
     .sort((a, b) => {
-      const yearA = parseInt(a.year);
-      const yearB = parseInt(b.year);
+      const aYear = parseInt(a.year);
+      const bYear = parseInt(b.year);
 
-      if (yearA === 0 && yearB !== 0) return -1;
-      if (yearB === 0 && yearA !== 0) return 1;
+      if (aYear === 0 && bYear !== 0) return order === "asc" ? 1 : -1;
+      if (bYear === 0 && aYear !== 0) return order === "asc" ? -1 : 1;
 
-      return order === "asc" ? yearA - yearB : yearB - yearA;
+      return order === "asc" ? aYear - bYear : bYear - aYear;
     });
 
   const actuallyLang =

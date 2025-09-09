@@ -2,13 +2,20 @@
 
 import { ChevronRightIcon, HomeIcon } from "@heroicons/react/24/outline";
 import { Link, usePathname } from "@/i18n/navigation";
+import navHU from "@/locales/hu/nav.json";
+import navEN from "@/locales/en/nav.json";
+import { useLocale } from "next-intl";
+import { MEMBER_NAME_MAP } from "@/constants";
 
 export default function BreadCrumb() {
   const pathname = usePathname();
+  const locale = useLocale() as "en" | "hu";
   const breadcrumbItems = pathname
     .split("/")
     .filter(Boolean)
     .filter((item) => item !== "hu" && item !== "en");
+
+  const items: Record<string, string> = locale === "hu" ? navHU : navEN;
 
   return (
     <section className="mx-container my-2  flexStart xl:pt-10 p-2">
@@ -19,6 +26,10 @@ export default function BreadCrumb() {
           </Link>
         )}
         {breadcrumbItems.map((item, idx) => {
+          const labelFromNav = items[item];
+          const labelFromMembers = MEMBER_NAME_MAP[locale]?.[item];
+          const label = labelFromNav || labelFromMembers || item;
+
           return (
             <span key={idx} className="flex items-center">
               <span className="flexCenter mx-2">
@@ -29,10 +40,10 @@ export default function BreadCrumb() {
                   href={`/${breadcrumbItems.slice(0, idx + 1).join("/")}`}
                   className="hover:text-slate-400"
                 >
-                  {item}
+                  {label}
                 </Link>
               ) : (
-                <span className="text-gray-700">{item}</span>
+                <span className="text-gray-700">{label}</span>
               )}
             </span>
           );

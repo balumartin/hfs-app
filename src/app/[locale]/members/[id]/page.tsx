@@ -1,8 +1,8 @@
 import BackButton from "@/components/BackButton";
 import membersHu from "@/locales/hu/common.json";
 import membersEn from "@/locales/en/common.json";
-import pageTitleHU from "@/locales/hu/pageTitle.json";
-import pageTitleEN from "@/locales/en/pageTitle.json";
+import navHU from "@/locales/hu/nav.json";
+import navEN from "@/locales/en/nav.json";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
@@ -15,7 +15,7 @@ export default async function MemberDetailsPage({
 }) {
   const { locale, id } = await params;
 
-  const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
+  const pageTitle = locale === "hu" ? navHU : navEN;
 
   const membersHuData: MembersData = membersHu;
   const membersEnData: MembersData = membersEn;

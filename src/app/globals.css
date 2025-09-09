@@ -7,7 +7,7 @@
   --foreground: #1e1e1e;
 }
 
-@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
 
 html,
 body {
@@ -31,11 +31,11 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
 
 @layer utilities {
   .mx-container {

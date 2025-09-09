@@ -1,8 +1,8 @@
-import pageTitleHU from "@/locales/hu/pageTitle.json";
-import pageTitleEN from "@/locales/en/pageTitle.json";
+import navHU from "@/locales/hu/nav.json";
+import navEN from "@/locales/en/nav.json";
 import { BookOpenIcon } from "@heroicons/react/24/outline";
-import projectHu from "@/locales/hu/projects.json";
-import projectEn from "@/locales/en/projects.json";
+import prijectHU from "@/locales/hu/projects.json";
+import projectEN from "@/locales/en/projects.json";
 import ProjectCard from "@/components/ProjectCard";
 
 
@@ -13,8 +13,8 @@ export default async function ProjectsPage({
 }) {
   const { locale } = await params;
 
-  const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
-  const projects = locale === "hu" ? projectHu : projectEn;
+  const pageTitle = locale === "hu" ? navHU : navEN;
+  const projects = locale === "hu" ? prijectHU : projectEN;
 
   const descArray = projects.sort((a, b) => {
     const aString = a.date.split(" ");

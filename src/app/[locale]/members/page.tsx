@@ -1,6 +1,6 @@
 import MemberCard from "@/components/MemberCard";
-import pageTitleHU from "@/locales/hu/pageTitle.json";
-import pageTitleEN from "@/locales/en/pageTitle.json";
+import navHU from "@/locales/hu/nav.json";
+import navEN from "@/locales/en/nav.json";
 import { UsersIcon } from "@heroicons/react/24/outline";
 import membersHu from "@/locales/hu/common.json";
 import membersEn from "@/locales/en/common.json";
@@ -17,7 +17,7 @@ export default async function MembersPage({
   const membersEnData: MembersData = membersEn;
 
   const common = locale === "hu" ? membersHuData : membersEnData;
-  const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
+  const pageTitle = locale === "hu" ? navHU : navEN;
 
   const members = common.members;
   const membersArray = Object.entries(members);

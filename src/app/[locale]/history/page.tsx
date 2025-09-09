@@ -1,6 +1,6 @@
 import { inter } from "@/app/ui/fonts";
-import pageTitleHU from "@/locales/hu/pageTitle.json";
-import pageTitleEN from "@/locales/en/pageTitle.json";
+import navHU from "@/locales/hu/nav.json";
+import navEN from "@/locales/en/nav.json";
 import historyHu from "@/locales/hu/ourHistory.json";
 import historyEn from "@/locales/en/ourHistory.json";
 import { BookOpenIcon } from "@heroicons/react/24/outline";
@@ -14,7 +14,7 @@ export default async function HistoryPage({
   const { locale } = await params;
 
   const history = locale === "hu" ? historyHu : historyEn;
-  const pageTitle = locale === "hu" ? pageTitleHU : pageTitleEN;
+  const pageTitle = locale === "hu" ? navHU : navEN;
 
   const historyParts = Object.values(history).flat();
 
