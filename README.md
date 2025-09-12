@@ -18,8 +18,8 @@ Ez a projekt a **Magyar Szómaesztétikai Fórum** hivatalos weboldala, mely cé
 - [TypeScript](https://www.typescriptlang.org/) – Típusos JavaScript
 - [Tailwind CSS](https://tailwindcss.com/) – Utility-first stílusozás
 - [clsx](https://github.com/lukeed/clsx) – Feltételes CSS osztálykezelés
+- [next-intl](https://next-intl-docs.vercel.app/) – Nemzetközi nyelvi támogatás (i18n)
 - [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/) – Kódformázás és minőség
-- [Next Image](https://nextjs.org/docs/pages/api-reference/components/image) – Optimalizált képek
 
 ---
 
