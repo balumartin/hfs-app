@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="relative max-sm:flex-col flexCenter max-sm:gap-4 gap-10 w-full h-20 py-4 text-center text-sm text-gray-500 bg-gray-100">
