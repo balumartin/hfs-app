@@ -18,7 +18,7 @@ export default function BreadCrumb() {
   const items: Record<string, string> = locale === "hu" ? navHU : navEN;
 
   return (
-    <section className="mx-container my-2  flexStart xl:pt-10 p-2">
+    <section className="mx-container my-2 flexStart lg:pt-10 p-2">
       <div className="flexStart col-start-1 col-end-6 row-start-2 row-end-3 text-sm text-gray-700">
         {breadcrumbItems.length > 0 && (
           <Link href="/" className="hover:text-slate-400">
