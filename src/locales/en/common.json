@@ -2,9 +2,9 @@
   "members": {
     "CsukaBotond": {
       "name": "Botond Csuka",
-      "post": "Botond Csuka works on early modern philosophy and eighteenth-century history of ideas. Assistant professor at the Department of Philosophy at the University of Szeged",
+      "post": "Botond Csuka works on early modern philosophy and eighteenth-century British intellectual history. He is assistant professor at the Department of Philosophy at the University of Szeged.",
       "profileImg": "/person/CsukaBotond.jpg",
-      "bio": "Botond Csuka works on early modern philosophy and eighteenth-century history of ideas, and is particularly interested in how the early modern cooperation of philosophy, science, medicine and the arts shaped our modern understanding of the human body and somatic practices. Assistant professor at the Department of Philosophy at the University of Szeged Botond also has an interest in the current developments in somaesthetics, everyday aesthetics and environmental aesthetics. He earned his Ph.D. in Philosophy at Eötvös Loránd University, Budapest in 2020. Currently, he is Senior Lecturer at the Department of Social Sciences at the Hungarian University of Sports Science, Budapest, where he teaches courses mainly in the philosophy of sport and the cultural history of the body.",
+      "bio": "Botond Csuka is Assistant professor at the Department of Philosophy at the University of Szeged. He works on early modern philosophy and eighteenth-century intellectual history, and is particularly interested in how the early modern cooperation of philosophy, science, medicine and the arts shaped our modern understanding of the human body and somatic practices.  Botond also has an interest in the current developments in somaesthetics, everyday aesthetics and environmental aesthetics.",
       "publications": [
         {
           "year": "2022",
@@ -454,6 +454,13 @@
       "profileImg": "/person/Veres_Balint1.jpeg",
       "bio": "Bálint Veres has a PhD in aesthetics and is tenured Associate Professor and Head of DLA / PhD-in-practice Program at Moholy-Nagy University of Art and Design, Budapest, and holder of a prestigious teaching award (Apáczai Csere János-Award). He is President of the Hungarian Forum for Somaesthetics and member of the International Association for Aesthetics, International Society of Intermedia Studies and the European Network of Somaesthetics. In 2023, his book Somaesthetics and Design Culture, co-edited with Richard Shusterman, was published by Brill. He is the organiser of the international interdisciplinary conferences “Design Culture and Somaesthetics” (2019), “The Promise of Pragmatist Aesthetics” (2022) and “Designing Everyday Experience” (2023). Bálint pursued his studies with a parallel interest in humanities and music. In addition to graduating from Eötvös Loránd University, he studied music composition, piano, bassoon and singing. His professional fields of interest include contemporary aesthetics, somaesthetics, design culture theories, music, media, architecture and disability studies. In addition to his activities as a researcher and teacher, he has worked as a critic and artistic consultant at various institutions and as co-editor and curator at Arcus Temporum Art Festival of Pannonhalma (2005–14) and founder of MOME TransferLab (2012–19), an interdisciplinary workshop for social design and equal opportunities. Also founder of Aetmostudio at MOME, pursuing research and creation along an atmosphere-centered mindset.",
       "publications": [
+        {
+          "year": "2025",
+          "title": "Fittedness of home. Sensorial and somatic dynamics in the era of IKEA homes",
+          "source": "The Journal of Somaesthetics 11: no. 1, pp. 124-140",
+          "lang": "en",
+          "url": ""
+        },
         {
           "year": "2022",
           "title": "“Pragmatista esztétika, kritikai elmélet, popkultúra”",
