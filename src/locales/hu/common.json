@@ -603,6 +603,35 @@
           "url": ""
         }
       ]
+    },
+    "JobbagyBernadett":{
+      "name": "Jobbágy Bernadett",
+      "post": "Jobbágy Bernadett, koreográfus, előadó, szomatikus kutató, az MKE doktorjelöltje.",
+      "profileImg": "/person/Jobbagy.jpg",
+      "bio": "Jobbágy Bernadett a Magyar Képzőművészeti Egyetem (MKE) doktorjelöltje, abszolutóriummal végzett doktorandája. Koreográfus, előadó, testtudati mozgáscsoport vezető (a Body-Mind Centering® Iskolában képződött Somatic Movement Educator), valamint szomatikus mozgókép kutató és filmalkotó. Alapdiplomáját tájépítészmérnökként szerezte a Budapesti Corvinus Egyetemen (2006), később a Budapest Kortárstánc Főiskolán tanult, majd a Lumiere Filmiskolában végzett vágóként. 2021-ben részt vett a SZOME – Szomatikus Oktatásért és Mozgásért Egyesület alapításában, melynek azóta is tagja. Jelenlegi kutatásában a mozgókép és a szomatika párbeszédét, egymásra hatását, a mozgókép szomatikus potenciálját tanulmányozza, elsősorban koreografikus mozgóképek vizsgálatán keresztül, az Innovációs és Technológiai Minisztérium Kooperatív Doktori Program (KDP-2021) Doktori Hallgatói Ösztöndíj Programjának támogatásával. Kutatásához kapcsolódóan több nyilvános szakmai eseményt szervezett, köztük nemzetközi részvétellel megvalósult ‘Contemporary Somatics – Bodies Today’ (2025) szomatikus művészeti szimpóziumot. Emellett független alkotóként, előadóként és pedagógusként is dolgozik. A kortárs tánc és improvizáció mellett meghatározó szellemi és mozgásos háttere a Body-Mind Centering® (BMC®) testtudati iskola, valamint a Tai Chi és a QiGong rendszeres gyakorlása.",
+      "publications": [
+        {
+          "year": "2022",
+          "title": "AIA: 120-hour-book.",
+          "source": "Created by Bernadett Jobbágy, Friederike Landau-Donnelly, Miriam Mallalieu, Roelant Meijer, Giulia Paradell, Amy Pezzin, Cristian Toro & Zoë Wonfor.",
+          "lang": "en",
+          "url": "https://www.studiothefuture.nl/aia"
+        },
+        {
+          "year": "2024",
+          "title": "Embodying Space: The Inside and the Outside of Soma in a Creative Process.",
+          "source": "Papers in Arts and Humanities 4(1): 103-123.",
+          "lang": "en",
+          "url": "https://doi.org/10.52885/kcbpef02"
+        },
+        {
+          "year": "2024",
+          "title": "Somatic Composition and Embodied Filmmaking – a case study on practice and practitioners through the example of a Creative Lab.",
+          "source": "The Journal of Somaesthetics 10(2): 162-177.",
+          "lang": "en",
+          "url": "https://doi.org/10.54337/ojs.jos.v10i2.8600"
+        }
+      ]
     }
   }
 }
