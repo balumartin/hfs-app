@@ -21,7 +21,8 @@ export default function Header() {
     { id: "members", href: "/members", label: t("members") },
     { id: "projects", href: "/projects", label: t("projects") },
     { id: "publications", href: "/publications", label: t("publications") },
-    { id: "contact", href: "/history", label: t("history") },
+    { id: "history", href: "/history", label: t("history") },
+    { id: "contact", href: "/contact", label: t("contact") },
   ];
 
   return (
