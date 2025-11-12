@@ -26,7 +26,7 @@ export default async function HistoryPage({
           <span className="z-50">{pageTitle.history}</span>
         </h1>
         <div
-          className={`${inter.className} relative z-50 leading-relaxed flexStart flex-col gap-3 p-4 `}
+          className={`${inter.className} relative z-50 leading-relaxed flexStart flex-col gap-3 `}
         >
           {historyParts.map((part, i) => (
             <p key={i} className="mb-2">
