@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Tiltjuk a felesleges/technikai route-okat
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/

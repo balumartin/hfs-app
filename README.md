@@ -1,42 +1,56 @@
-# Magyar Szómaesztétikai Fórum  
-## Hungarian Forum for Somaesthetics
+![Next.js](https://img.shields.io/badge/Next.js-000?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript)
+# 🇭🇺 Magyar Szómaesztétikai Fórum
 
-Ez a projekt a **Magyar Szómaesztétikai Fórum** hivatalos weboldala, mely célja a szómaesztétikai kutatások, események, publikációk és tagok bemutatása. A platform lehetőséget nyújt a látogatóknak, hogy megismerkedjenek a közösség munkájával, tagjaival, valamint hozzáférjenek az aktuális hírekhez és eseményekhez.
+## 🇬🇧 Hungarian Forum for Somaesthetics
 
----
+A **Magyar Szómaesztétikai Fórum** hivatalos weboldala, amely a szómaesztétikai kutatások, események, publikációk és közösségi tagok bemutatását szolgálja.
 
-## 🌐 Elérhetőség
-
-- **Magyar név:** Magyar Szómaesztétikai Fórum  
-- **Angol név:** Hungarian Forum for Somaesthetics    
+A platform célja egy strukturált és átlátható felület biztosítása a látogatók számára, ahol megismerhetik a közösség tevékenységeit és aktuális eseményeit.
 
 ---
 
-## ⚙️ Technológiák
+## 🌐 Live Website
 
-- [Next.js 15](https://nextjs.org/) – Full-stack React keretrendszer
-- [TypeScript](https://www.typescriptlang.org/) – Típusos JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) – Utility-first stílusozás
-- [clsx](https://github.com/lukeed/clsx) – Feltételes CSS osztálykezelés
-- [next-intl](https://next-intl-docs.vercel.app/) – Nemzetközi nyelvi támogatás (i18n)
-- [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/) – Kódformázás és minőség
+👉 https://somaesthetics.hu
+
 
 ---
 
-## 🚀 Telepítés fejlesztéshez
+## 📸 Preview
 
-1. **Repo klónozása:**
+<img src="./assets/home.png" width="600" />
 
- ```bash
- git clone https://github.com/balumartin/hfs-app.git
- cd hfs_app
+<img src="./assets/members.png" width="600" />
 
-2. **Függőségek telepítése:**
+<img src="./assets/history.png" width="600" />
 
- ```bash
- npm install
+---
 
-3. **Fejlesztői környezet indítása:**
+## ✨ Features
 
- ```bash
- npm run dev
+* Többnyelvű felület (HU / EN)
+* Események és publikációk megjelenítése
+* Tagok és közösségi információk
+* Reszponzív design
+* Modern, letisztult UI
+
+---
+
+## ⚙️ Tech Stack
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+* next-intl
+
+---
+
+
+## 🧠 Key Learnings
+
+* Next.js App Router használata
+* Nemzetköziesítés (i18n) implementálása
+* Komponens-alapú architektúra
+* Skálázható frontend struktúra
+
